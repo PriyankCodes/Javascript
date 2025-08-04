@@ -45,7 +45,7 @@ addToCartBtn.addEventListener('click', () => {
     } else {
         cart.push({ name: itemName, price, quantity });
     }
-quantityInput.value = '';
+    quantityInput.value = '1';
     addCart();
 });
 
