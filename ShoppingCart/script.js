@@ -50,9 +50,17 @@ addToCartBtn.addEventListener('click', () => {
 });
 
 function addCart() {
+    const cartSection = document.getElementById('cartSection');
+
     cartBody.innerHTML = '';
     let total = 0;
 
+    if (cart.length === 0) {
+        cartSection.style.display = 'none';
+        return;
+    } else {
+        cartSection.style.display = 'block';
+    }
     cart.forEach(item => {
         const itemTotal = item.price * item.quantity;
         total += itemTotal;
@@ -63,9 +71,15 @@ function addCart() {
           <td>${item.quantity}</td>
           <td>₹${item.price}</td>
           <td>₹${itemTotal}</td>
+            <td><button class="btn btn-sm btn-danger" onclick="removeItem('${item.name}')">Remove</button></td>
+
         `;
         cartBody.append(row);
     });
 
     finalTotalDisplay.textContent = `₹${total}`;
+}
+function removeItem(itemName) {
+    cart = cart.filter(item => item.name !== itemName);
+    addCart(); 
 }

@@ -32,7 +32,7 @@
             </div>
         </div>
         <br>
-        <div class="bill border p-3 mt-4">
+        <div class="bill border p-3 mt-4" id="cartSection" style="display: none;">
             <div class="bill-header">
                 <h4>Bill Details</h4>
                 <div class="date-label">Date: <span id="currentDate"></span></div>
@@ -45,12 +45,13 @@
                         <th>Quantity</th>
                         <th>Price (₹)</th>
                         <th>Total (₹)</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody id="cartBody"></tbody>
                 <tfoot>
                     <tr class="total-row">
-                        <td colspan="3">Final Total</td>
+                        <td colspan="4">Final Total</td>
                         <td id="finalTotal">₹0</td>
                     </tr>
                 </tfoot>
