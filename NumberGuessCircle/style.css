@@ -1,0 +1,38 @@
+  body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
+  }
+
+  #buttons-container {
+      display: flex;
+      grid-gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+  }
+
+  button {
+      background-color: blue;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 16px;
+      cursor: pointer;
+  }
+
+  .green {
+      background-color: green;
+  }
+
+  .red {
+      background-color: red;
+  }
+
+  #message,
+  #attempts-left {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+  }
